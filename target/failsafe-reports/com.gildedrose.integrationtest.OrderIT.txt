@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.gildedrose.integrationtest.OrderIT
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.194 s - in com.gildedrose.integrationtest.OrderIT

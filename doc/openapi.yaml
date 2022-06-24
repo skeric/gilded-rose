@@ -1,0 +1,135 @@
+openapi: 3.0.1
+info:
+  title: Gilded Rose API
+  description: The Gilded Rose API by 1148195 B.C. LTD.
+  version: '0.1'
+servers:
+  - url: http://localhost:8088
+paths:
+  /api/gilded-rose/inventory/items:
+    get:
+      description: Find all items
+      responses:
+        '200':
+          description: Find all items successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                '0':
+                  value: >-
+                    [{"id":1,"name":"Fisheye Store
+                    Mirror","description":"Mirror","price":100.25},{"id":2,"name":"USS
+                    Maine Ship's
+                    Portrait","description":"Painting","price":500.0},{"id":3,"name":"Oak
+                    Island","description":"Painting","price":300.0},{"id":4,"name":"Bullet-Holed
+                    Deer Rack","description":"Rack","price":200.0}]
+      servers:
+        - url: http://localhost:8088
+    servers:
+      - url: http://localhost:8088
+  /api/gilded-rose/inventory/item/'Fisheye Store Mirror':
+    get:
+      description: Find an item by name
+      responses:
+        '404':
+          description: Item not found
+      servers:
+        - url: http://localhost:8088
+    servers:
+      - url: http://localhost:8088
+  /api/gilded-rose/ordering/request:
+    post:
+      description: Order an item
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                quantity:
+                  type: integer
+                name:
+                  type: string
+            examples:
+              '0':
+                value: |-
+                  {
+                      "name": "Fisheye Store Mirror",
+                      "quantity": 1
+                  }
+              '1':
+                value: |-
+                  {
+                      "name": "Candle",
+                      "quantity": 10
+                  }
+              '2':
+                value: |-
+                  {
+                      "name": "Fisheye Store Mirror",
+                      "quantity": 10
+                  }
+      responses:
+        '201':
+          description: Order is created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  orderNumber:
+                    type: string
+                  quantity:
+                    type: integer
+                  price:
+                    type: number
+                  name:
+                    type: string
+                  errorMessage: {}
+              examples:
+                '0':
+                  value: >-
+                    {"orderNumber":"ef16eb76-3aea-490d-974c-62cf21a4b7ef","name":"Fisheye
+                    Store
+                    Mirror","price":100.25,"quantity":1,"errorMessage":null}
+        '400':
+          description: Item not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  orderNumber: {}
+                  quantity: {}
+                  price: {}
+                  name:
+                    type: string
+                  errorMessage:
+                    type: string
+              examples:
+                '0':
+                  value: >-
+                    {"orderNumber":null,"name":"Candle","price":null,"quantity":null,"errorMessage":"Item
+                    Candle is not found"}
+                '1':
+                  value: >-
+                    {"orderNumber":null,"name":"Fisheye Store
+                    Mirror","price":null,"quantity":null,"errorMessage":"Quantity
+                    for sell is 1 less than requested quantity 10"}
+        '401':
+          description: User not authorized
+      servers:
+        - url: http://localhost:8088
+    servers:
+      - url: http://localhost:8088
+components:
+  schemas:
+    Schema:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64

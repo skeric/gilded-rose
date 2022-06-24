@@ -1,0 +1,16 @@
+/home/eric/gitrepo/skeric/gilded-rose/src/test/java/com/miw/gildedrose/service/InventoryServiceTest.java
+/home/eric/gitrepo/skeric/gilded-rose/src/test/java/com/miw/gildedrose/controller/InventoryControllerTest.java
+/home/eric/gitrepo/skeric/gilded-rose/src/test/java/com/miw/gildedrose/converter/ItemView2ItemViewDtoTest.java
+/home/eric/gitrepo/skeric/gilded-rose/src/test/java/com/miw/gildedrose/service/ViewCountServiceTest.java
+/home/eric/gitrepo/skeric/gilded-rose/src/test/java/com/miw/gildedrose/controller/OrderControllerTest.java
+/home/eric/gitrepo/skeric/gilded-rose/src/integration-test/java/com/gildedrose/integrationtest/OrderIT.java
+/home/eric/gitrepo/skeric/gilded-rose/src/test/java/com/miw/gildedrose/facade/OrderFacadeTest.java
+/home/eric/gitrepo/skeric/gilded-rose/src/test/java/com/miw/gildedrose/service/StockServiceTest.java
+/home/eric/gitrepo/skeric/gilded-rose/src/test/java/com/miw/gildedrose/converter/Item2ItemDtoTest.java
+/home/eric/gitrepo/skeric/gilded-rose/src/test/java/com/miw/gildedrose/helper/AssertionHelper.java
+/home/eric/gitrepo/skeric/gilded-rose/src/test/java/com/miw/gildedrose/converter/ItemViewDto2ItemViewTest.java
+/home/eric/gitrepo/skeric/gilded-rose/src/test/java/com/miw/gildedrose/GildedRoseAppTest.java
+/home/eric/gitrepo/skeric/gilded-rose/src/test/java/com/miw/gildedrose/service/OrderServiceTest.java
+/home/eric/gitrepo/skeric/gilded-rose/src/test/java/com/miw/gildedrose/service/SurgePriceServiceTest.java
+/home/eric/gitrepo/skeric/gilded-rose/src/integration-test/java/com/gildedrose/integrationtest/InventoryIT.java
+/home/eric/gitrepo/skeric/gilded-rose/src/test/java/com/miw/gildedrose/facade/InventoryFacadeTest.java
